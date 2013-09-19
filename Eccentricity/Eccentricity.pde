@@ -29,6 +29,8 @@ void draw() {
   scale(1, zoom);
   //ellipse(0,0,350,350);
   ellipse(0,0,50,50);
+  ellipse.setStroke(color(255));  
+  ellipse.setStrokeWeight(4);
   fill(0);
   textAlign(CENTER);
   text(zoom,100, 95);
