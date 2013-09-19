@@ -15,10 +15,9 @@ PFont f;
 
 void setup() {
   size(640, 360);
-  // The file "bot1.svg" must be in the data folder
-  // of the current sketch to load successfully
-  //bot = loadShape("bot1.svg");
-  f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
+  println(PFont.list());
+  f = createFont("Georgia", 24);
+  textFont(f); // Arial, 16 point, anti-aliasing on
   ellipseMode(CENTER);
 } 
 
@@ -28,10 +27,9 @@ void draw() {
   float zoom = map(mouseX, 0, width, 0.1, 1);
   print("zoom: " + zoom);
   scale(1, zoom);
-  //shape(bot, -140, -140); //puts the shape in the middle of the screen?
-  ellipse(0,0,350,350);
+  //ellipse(0,0,350,350);
   ellipse(0,0,50,50);
-  textFont(f,16);
   fill(0);
-  text("Hello Strings!",10,100);
+  textAlign(CENTER);
+  text(zoom,100, 95);
 }
