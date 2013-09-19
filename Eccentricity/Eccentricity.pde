@@ -16,14 +16,19 @@ void setup() {
   size(640, 360);
   // The file "bot1.svg" must be in the data folder
   // of the current sketch to load successfully
-  bot = loadShape("bot1.svg");
+  //bot = loadShape("bot1.svg");
+  PFont out;
+  out = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
+  ellipseMode(CENTER);
 } 
 
 void draw() {
   background(56); 
   translate(width/2, height/2);
   float zoom = map(mouseX, 0, width, 0.1, 1);
-  print("zoom:" + zoom);
+  print("zoom: " + zoom);
   scale(1, zoom);
-  shape(bot, -140, -140);
+  //shape(bot, -140, -140); //puts the shape in the middle of the screen?
+  ellipse(0,0,350,350);
+  ellipse(0,0,50,50);
 }
