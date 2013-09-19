@@ -11,14 +11,14 @@
 /* @pjs preload="bot1.svg"; */ 
 
 PShape bot;
+PFont f;
 
 void setup() {
   size(640, 360);
   // The file "bot1.svg" must be in the data folder
   // of the current sketch to load successfully
   //bot = loadShape("bot1.svg");
-  PFont out;
-  out = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
+  f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
   ellipseMode(CENTER);
 } 
 
@@ -31,4 +31,7 @@ void draw() {
   //shape(bot, -140, -140); //puts the shape in the middle of the screen?
   ellipse(0,0,350,350);
   ellipse(0,0,50,50);
+  textFont(f,16);
+  fill(0);
+  text("Hello Strings!",10,100);
 }
